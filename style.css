@@ -251,3 +251,17 @@ a{
             line-height: 65%;
         }
     }
+
+@media(max-width: 600px){
+    *
+        h1{
+            font-size: 150%;
+            line-height: 10%;
+        }
+        
+        h2{
+            font-size: 150%;
+            line-height: 65%;
+        }
+    }
+    
