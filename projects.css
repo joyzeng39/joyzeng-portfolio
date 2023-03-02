@@ -140,7 +140,7 @@ img{
 
 
 .text-section{
-    padding: 35%;
+    padding: 14rem;
     padding-left: 5rem;
     padding-right: 5rem;
 }
@@ -293,7 +293,7 @@ img{
         }
 
         .text-section{
-            padding-top: 45%;
+            padding: 13rem;
             padding-left: 5rem;
             padding-right: 5rem;
         }
@@ -352,7 +352,7 @@ img{
         }
 
         .text-section{
-            padding-top: 30%;
+            padding: 15rem;
             padding-left: 5rem;
             padding-right: 5rem;
             padding-bottom: 20%;
@@ -379,7 +379,7 @@ img{
         }
 
         .text-section{
-            padding-top: 35%;
+            padding-top: 13rem;
             padding-left: 5rem;
             padding-right: 5rem;
             padding-bottom: 20%;
@@ -401,7 +401,7 @@ img{
             }
     
             .text-section{
-                padding-top: 35%;
+                padding: 12rem;
                 padding-left: 5rem;
                 padding-right: 5rem;
                 padding-bottom: 20%;
