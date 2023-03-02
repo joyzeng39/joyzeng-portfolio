@@ -20,30 +20,14 @@ body{
     margin: 0;
     padding: 0;
 
-    background: -o-linear-gradient(135deg, var(--yellow), var(--green), var(--blue), var(--teal));
-
     background: linear-gradient(-45deg, var(--yellow), var(--green), var(--blue), var(--teal));
 	background-size: 400% 400%;
-	-webkit-animation: gradient 15s ease infinite;
-	        animation: gradient 15s ease infinite;
+	animation: gradient 15s ease infinite;
 	height: 100vh;
 
     font-family: 'Golos Text', sans-serif;  
     font-family: 'Playfair Display', serif;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-}
-
-@-webkit-keyframes gradient {
-    0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+    box-sizing: border-box;
 }
 
 @keyframes gradient {
@@ -115,28 +99,17 @@ a{
     padding-top: 2rem;
     padding-left: 5rem;
 
-    -webkit-animation-name: fontChange;
-
-            animation-name: fontChange;
-    -webkit-animation-duration: 2s;
-            animation-duration: 2s;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
+    animation-name: fontChange;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
 
 /**----------NAV SECTION----------**/
 
 .nav-list{
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
 
     position: fixed;
     z-index: 999;
@@ -147,22 +120,6 @@ a{
 }
 .nav-list h2{
     line-height: 50%;
-}
-
-@-webkit-keyframes fontChange {
-  
-    0% {
-        font-family: 'Golos Text', sans-serif; 
-    }
-
-    50% {
-        font-family: 'Playfair Display', serif;
-        font-style: italic;
-    }
-
-    100% {
-        font-family: 'Golos Text', sans-serif; 
-    }
 }
 
 @keyframes fontChange {
@@ -182,50 +139,35 @@ a{
 }
 
     .worknav{
-        -ms-flex-preferred-size: 33.333%;
-            flex-basis: 33.333%;
+        flex-basis: 33.333%;
         font-family: 'Golos Text', sans-serif;  
-        -webkit-transition: 0.5s;  
-        -o-transition: 0.5s;  
         transition: 0.5s;
     }
     .worknav:hover{
         font-family: 'Playfair Display', serif;
         font-style: italic;
-        -webkit-transition: 0.2s;
-        -o-transition: 0.2s;
         transition: 0.2s;
     }
 
     .aboutnav{
-        -ms-flex-preferred-size: 33.333%;
-            flex-basis: 33.333%;
+        flex-basis: 33.333%;
         font-family: 'Golos Text', sans-serif;  
-        -webkit-transition: 0.5s;  
-        -o-transition: 0.5s;  
         transition: 0.5s;
     }
     .aboutnav:hover{
         font-family: 'Playfair Display', serif;
         font-style: italic;
-        -webkit-transition: 0.2s;
-        -o-transition: 0.2s;
         transition: 0.2s;
     }
 
     .contactnav{
-        -ms-flex-preferred-size: 33.333%;
-            flex-basis: 33.333%;
+        flex-basis: 33.333%;
         font-family: 'Golos Text', sans-serif;  
-        -webkit-transition: 0.5s;  
-        -o-transition: 0.5s;  
         transition: 0.5s;
     }
     .contactnav:hover{
         font-family: 'Playfair Display', serif;
         font-style: italic;
-        -webkit-transition: 0.2s;
-        -o-transition: 0.2s;
         transition: 0.2s;
     }
 
@@ -240,41 +182,29 @@ a{
     padding-bottom: 2rem;
 
     font-family: 'Golos Text', sans-serif;  
-    -webkit-transition: 0.5s;  
-    -o-transition: 0.5s;  
     transition: 0.5s;
 }
 .resume:hover{
     font-family: 'Playfair Display', serif;
     font-style: italic;
-    -webkit-transition: 0.2s;
-    -o-transition: 0.2s;
     transition: 0.2s;
 }
 
 /**----------WORK SECTION----------**/
 .work-container{
     z-index: -100;
-    display: -ms-grid;
     display: grid;
     border: 1.7px solid var(--red);
-    -ms-grid-columns: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
 .work-item{
-    -webkit-filter: grayscale(0%);
-            filter: grayscale(0%);
+    filter: grayscale(0%);
     border: 1.7px solid var(--red);
-    -webkit-transition: 0.5s;
-    -o-transition: 0.5s;
     transition: 0.5s;
 }
 .work-item:hover{
-    -webkit-filter: grayscale(100%) brightness(1.1) contrast(1) blur(5px);
-            filter: grayscale(100%) brightness(1.1) contrast(1) blur(5px);
-    -webkit-transition: 0.2s;
-    -o-transition: 0.2s;
+    filter: grayscale(100%) brightness(1.1) contrast(1) blur(5px);
     transition: 0.2s;
 }
 
@@ -290,7 +220,6 @@ a{
         }
 
         .work-container{
-            -ms-grid-columns: 1fr 1fr;
             grid-template-columns: 1fr 1fr;
         }
     }
@@ -306,7 +235,6 @@ a{
         }
 
         .work-container{
-            -ms-grid-columns: 1fr;
             grid-template-columns: 1fr;
         }
     }
@@ -341,14 +269,12 @@ a{
             z-index: 999;
         
             bottom: 0;
-            left: 0;
+            right: 0;
             padding-left: 5rem;
             padding-right: 5rem;
             padding-bottom: 2rem;
         
             font-family: 'Golos Text', sans-serif;  
-            -webkit-transition: 0.5s;  
-            -o-transition: 0.5s;  
             transition: 0.5s;
         }
     }
