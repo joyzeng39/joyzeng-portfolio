@@ -252,7 +252,7 @@ a{
         }
     }
 
-@media(max-width: 600px){
+@media(max-width: 400px){
     *
         h1{
             font-size: 150%;
@@ -263,5 +263,18 @@ a{
             font-size: 100%;
             line-height: 65%;
         }
+
+        .resume{
+            position: fixed;
+            z-index: 999;
+        
+            bottom: 0;
+            left: 0;
+            padding-left: 5rem;
+            padding-right: 5rem;
+            padding-bottom: 2rem;
+        
+            font-family: 'Golos Text', sans-serif;  
+            transition: 0.5s;
+        }
     }
-    
