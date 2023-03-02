@@ -1,0 +1,368 @@
+:root{
+    --red: #ff261a;
+    --ivory: #fff5ef;
+    --yellow:  #fff698;
+    --green: #9ae89b;
+    --blue: #a1d1e3;
+    --teal: #a4ecdb;
+}
+
+html{
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-size: 100%;
+    margin: 0;
+    padding: 0;    
+
+    background: linear-gradient(-45deg, var(--yellow), var(--green), var(--blue), var(--teal));
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+
+    font-family: 'Golos Text', sans-serif;  
+    font-family: 'Playfair Display', serif;
+    box-sizing: border-box;
+}
+
+@keyframes gradient {
+    0% {
+		background-position: 100% 50%;
+	}
+	50% {
+		background-position: 0% 50%;
+	}
+	100% {
+		background-position: 100% 50%;
+	}
+}
+
+h1{
+    font-weight: 400;
+    font-size: 1100%;
+    color: var(--red);
+    line-height: 15%;
+}
+
+h2{
+    font-weight: 400;
+    font-size: 300%;
+    color: var(--red);
+}
+
+h3{
+    font-weight: 400;
+    font-size: 100%;
+    color: var(--red);
+    font-family: 'Golos Text', sans-serif;  
+    font-style: italic;
+    line-height: 150%;
+    margin-bottom: -2rem;
+}
+
+p{
+    font-weight: 400;
+    font-size: 100%;
+    color: var(--red);
+    font-family: 'Golos Text', sans-serif;  
+    line-height: 150%;
+}
+
+a{
+    text-decoration: none;
+}
+
+hr{
+    border-top: 0.2px solid var(--red);
+    border-bottom: 0.2px solid var(--red);
+    margin-left:0;
+    width: 50px;
+}
+
+img{
+    border: 1.7px solid var(--red);
+}
+
+/**----------CLASSES----------**/
+.main{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.project-page{
+    display: flex;
+    flex-direction: row;
+}
+
+.homepage{
+    flex-basis: 50%;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+
+    overflow-y: hidden;
+}
+
+.picture-section{
+    flex-basis: 50%;
+    width: 100vw;
+    height: 100vh;
+    border: 1.7px solid var(--red);
+    overflow-y: scroll;
+}
+
+
+.text-section{
+    padding: 40%;
+    padding-left: 5rem;
+    padding-right: 15rem;
+}
+.title{
+    font-style: italic;
+}
+.text{
+    font-style: normal;
+}
+
+.brandmark{
+    text-align: left;
+    position: fixed;
+    z-index: 999;
+
+    top: 0;
+
+    padding-top: 2rem;
+    padding-left: 5rem;
+
+    animation-name: fontChange;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+/**----------NAV SECTION----------**/
+
+.nav-list{
+    display: flex;
+    flex-direction: row;
+    column-gap: 2.5rem;
+    justify-content: flex-start;
+
+    position: fixed;
+    z-index: 999;
+
+    bottom: 0;
+    padding-left: 5rem;
+    padding-bottom: 2rem;
+}
+.nav-list h2{
+    line-height: 50%;
+    font-size: 175%;
+}
+
+@keyframes fontChange {
+  
+    0% {
+        font-family: 'Golos Text', sans-serif; 
+    }
+
+    50% {
+        font-family: 'Playfair Display', serif;
+        font-style: italic;
+    }
+
+    100% {
+        font-family: 'Golos Text', sans-serif; 
+    }
+}
+
+    .worknav{
+        flex-basis: 33.333%;
+        font-family: 'Golos Text', sans-serif;  
+        transition: 0.5s;
+    }
+    .worknav:hover{
+        font-family: 'Playfair Display', serif;
+        font-style: italic;
+        transition: 0.2s;
+    }
+
+    .aboutnav{
+        flex-basis: 33.333%;
+        font-family: 'Golos Text', sans-serif;  
+        transition: 0.5s;
+    }
+    .aboutnav:hover{
+        font-family: 'Playfair Display', serif;
+        font-style: italic;
+        transition: 0.2s;
+    }
+
+    .contactnav{
+        flex-basis: 33.333%;
+        font-family: 'Golos Text', sans-serif;  
+        transition: 0.5s;
+    }
+    .contactnav:hover{
+        font-family: 'Playfair Display', serif;
+        font-style: italic;
+        transition: 0.2s;
+    }
+
+
+.card-gifs{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/*--------------- MEDIA QUERIES ---------------*/
+@media(max-width: 1400px){
+    *
+        h1{
+            font-size: 800%;
+        }
+        
+        h2{
+            font-size: 300%;
+        }
+
+        .work-container{
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .text-section{
+            padding-top: 55%;
+            padding-left: 5rem;
+            padding-right: 8rem;
+        }
+        .title{
+            font-style: italic;
+        }
+        .text{
+            font-style: normal;
+        }
+    }
+
+    @media(max-width: 900px){
+        *
+            h1{
+                font-size: 800%;
+            }
+            
+            h2{
+                font-size: 300%;
+            }
+    
+            .work-container{
+                grid-template-columns: 1fr 1fr;
+            }
+    
+            .text-section{
+                padding-top: 60%;
+                padding-left: 5rem;
+                padding-right: 6rem;
+            }
+        }
+
+@media(max-width: 768px){
+    *
+        h1{
+            font-size: 800%;
+        }
+        
+        h2{
+            font-size: 200%;
+        }
+
+        .nav-list{
+            flex-direction: column;
+        }
+        .nav-list h2{
+            font-size: 200%;
+        }
+
+        .work-container{
+            grid-template-columns: 1fr;
+        }
+
+        .project-page{
+            display: flex;
+            flex-direction: column;
+        }
+        
+
+        .homepage{
+            flex-basis: 0%;
+        }
+        .picture-section{
+            flex-basis: 100%;
+        }
+
+        .text-section{
+            padding-top: 40%;
+            padding-left: 5rem;
+            padding-right: 5rem;
+            padding-bottom: 20%;
+        }
+        .title{
+            font-style: italic;
+        }
+        .text{
+            font-style: normal;
+        }
+    }
+    
+@media(max-width: 720px){
+    *
+        h1{
+            font-size: 600%;
+            line-height: 10%;
+        }
+        
+        h2{
+            font-size: 230%;
+            line-height: 110%;
+        }
+
+        h3{
+            margin-bottom: -1rem;
+        }
+
+        .project-page{
+            display: flex;
+            flex-direction: column;
+        }
+        
+
+        .homepage{
+            flex-basis: 0%;
+        }
+        .picture-section{
+            flex-basis: 100%;
+        }
+
+        .title{
+            font-size: larger;
+        }
+        .text{
+            font-size: larger;
+        }
+    }
+
+@media(max-width: 375px){
+    *
+        h1{
+            font-size: 300%;
+            line-height: 10%;
+        }
+        
+        h2{
+            font-size: 100%;
+            line-height: 65%;
+        }
+    }
+
