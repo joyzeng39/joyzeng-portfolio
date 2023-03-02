@@ -43,14 +43,14 @@ body{
 
 h1{
     font-weight: 400;
-    font-size: 1100%;
+    font-size: 700%;
     color: var(--red);
     line-height: 15%;
 }
 
 h2{
     font-weight: 400;
-    font-size: 300%;
+    font-size: 250%;
     color: var(--red);
 }
 
@@ -94,6 +94,28 @@ img{
     padding: 0;
 }
 
+.brandmark{
+    display: flex;
+    text-align: left;
+    position: fixed;
+    z-index: 999;
+
+    top: 0;
+
+    padding-top: 2rem;
+    padding-left: 5rem;
+
+    animation-name: fontChange;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+/* The Overlay (background) */
+.burger-menu{
+    opacity: 0;
+}
+
+
 .project-page{
     display: flex;
     flex-direction: row;
@@ -118,30 +140,15 @@ img{
 
 
 .text-section{
-    padding: 40%;
+    padding: 35%;
     padding-left: 5rem;
-    padding-right: 15rem;
+    padding-right: 5rem;
 }
 .title{
     font-style: italic;
 }
 .text{
     font-style: normal;
-}
-
-.brandmark{
-    text-align: left;
-    position: fixed;
-    z-index: 999;
-
-    top: 0;
-
-    padding-top: 2rem;
-    padding-left: 5rem;
-
-    animation-name: fontChange;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
 }
 
 /**----------NAV SECTION----------**/
@@ -151,6 +158,8 @@ img{
     flex-direction: row;
     column-gap: 2.5rem;
     justify-content: flex-start;
+
+    opacity: 1;
 
     position: fixed;
     z-index: 999;
@@ -219,11 +228,60 @@ img{
     grid-template-columns: 1fr 1fr;
 }
 
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+    height: 100%;
+    width: 0%;
+    position: fixed; /* Stay in place */
+    z-index: 999; /* Sit on top */
+    right: 0;
+    top: 0;
+    background-color: var(--ivory); /* Black fallback color */
+    background-color: var(--ivory); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  }
+  
+  /* Position the content inside the overlay */
+  .overlay-content {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+  }
+  
+  /* The navigation links inside the overlay */
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: var(--red);
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .overlay a:hover, .overlay a:focus {
+    color: var(--red);
+  }
+  
+  /* Position the close button (top right corner) */
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+
+
+
+
 /*--------------- MEDIA QUERIES ---------------*/
-@media(max-width: 1400px){
+@media(max-width: 1023px){
     *
         h1{
-            font-size: 800%;
+            font-size: 700%;
         }
         
         h2{
@@ -235,9 +293,9 @@ img{
         }
 
         .text-section{
-            padding-top: 55%;
+            padding-top: 45%;
             padding-left: 5rem;
-            padding-right: 8rem;
+            padding-right: 5rem;
         }
         .title{
             font-style: italic;
@@ -247,40 +305,31 @@ img{
         }
     }
 
-    @media(max-width: 900px){
-        *
-            h1{
-                font-size: 800%;
-            }
-            
-            h2{
-                font-size: 300%;
-            }
-    
-            .work-container{
-                grid-template-columns: 1fr 1fr;
-            }
-    
-            .text-section{
-                padding-top: 60%;
-                padding-left: 5rem;
-                padding-right: 6rem;
-            }
-        }
-
-@media(max-width: 768px){
+@media(max-width: 800px){
     *
         h1{
-            font-size: 800%;
+            font-size: 400%;
         }
         
         h2{
-            font-size: 200%;
+            font-size: 230%;
         }
 
         .nav-list{
             flex-direction: column;
+            opacity: 0;
         }
+
+        .burger-menu{
+            opacity: 1;
+        }
+        .overlay a {font-size: 20px}
+        .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+        }
+
         .nav-list h2{
             font-size: 200%;
         }
@@ -303,7 +352,7 @@ img{
         }
 
         .text-section{
-            padding-top: 40%;
+            padding-top: 30%;
             padding-left: 5rem;
             padding-right: 5rem;
             padding-bottom: 20%;
@@ -315,54 +364,25 @@ img{
             font-style: normal;
         }
     }
-    
-@media(max-width: 720px){
+
+@media(max-width: 600px){
     *
         h1{
-            font-size: 600%;
+            font-size: 350%;
             line-height: 10%;
         }
         
         h2{
-            font-size: 230%;
-            line-height: 110%;
+            font-size: 150%;
+            padding-top: 1rem;
+            line-height: 120%;
         }
 
-        h3{
-            margin-bottom: -1rem;
+        .text-section{
+            padding-top: 35%;
+            padding-left: 5rem;
+            padding-right: 5rem;
+            padding-bottom: 20%;
         }
 
-        .project-page{
-            display: flex;
-            flex-direction: column;
-        }
-        
-
-        .homepage{
-            flex-basis: 0%;
-        }
-        .picture-section{
-            flex-basis: 100%;
-        }
-
-        .title{
-            font-size: larger;
-        }
-        .text{
-            font-size: larger;
-        }
     }
-
-@media(max-width: 375px){
-    *
-        h1{
-            font-size: 300%;
-            line-height: 10%;
-        }
-        
-        h2{
-            font-size: 100%;
-            line-height: 65%;
-        }
-    }
-
